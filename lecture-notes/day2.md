@@ -1,0 +1,2 @@
+# Day 2: Strongly interacting systems
+The observation of the Mott transition in optical lattice and the BEC-BCS crossover around wide Feshbach resonances established ultracold atoms for the study of strongly correlated systems. We will discuss optical lattices and the Hubbard model and the Mott transition. If we have sufficient time we might take a look into Feshbach-Resonances and the BEC-BCS crossover.
