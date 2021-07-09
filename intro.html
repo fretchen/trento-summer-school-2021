@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Cold atoms for hep</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Day 1: How we got ultracold" href="day1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/my_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cold atoms for hep</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="day1.html">
+   Day 1: How we got ultracold
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day2.html">
+   Day 2: Strongly interacting systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day3.html">
+   Day 3 : Collective spins
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day4.html">
+   Day 4: Synthetic gauge fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="day5.html">
+   Day 5: Opening the route towards high energy physics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-how-we-got-ultracold">
+   <span class="xref myst">
+    1. Day – How we got ultracold
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-optical-lattices">
+   <span class="xref myst">
+    2. Day – Optical lattices
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-collective-spins">
+   <span class="xref myst">
+    3. Day – Collective spins
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-synthetic-gauge-fields">
+   <span class="xref myst">
+    4. Day – Synthetic gauge fields
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-dynamical-gauge-fields">
+   <span class="xref myst">
+    5. Day – Dynamical gauge fields
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Highly controlled experimental platforms like ultracold atoms have profoundly changed our approach to many-body physics over the last twenty years. In this course, we will discuss the experimental tools that enabled this progress and take a deeper look how those tools lead to current efforts on the investigation of lattice gauge theories. The following can be seen as a preliminary guideline for the five day lecture:</p>
+<div class="section" id="day-how-we-got-ultracold">
+<h2><a class="reference internal" href="day1.html"><span class="doc std std-doc">1. Day – How we got ultracold</span></a><a class="headerlink" href="#day-how-we-got-ultracold" title="Permalink to this headline">¶</a></h2>
+<p>We will discuss the origins and development of laser cooling techniques as well as the first creation of a Bose-Einstein condensates. These works provide the solid experimental tools for the study of complex many-body systems that we will study the next days.</p>
+<div class="admonition-tutorial admonition">
+<p class="admonition-title">Tutorial</p>
+<p>Virtual lab visit</p>
+</div>
+</div>
+<div class="section" id="day-optical-lattices">
+<h2><a class="reference internal" href="day2.html"><span class="doc std std-doc">2. Day – Optical lattices</span></a><a class="headerlink" href="#day-optical-lattices" title="Permalink to this headline">¶</a></h2>
+<p>The observation of the Mott transition in optical lattice and the BEC-BCS crossover around wide Feshbach resonances established ultracold atoms for the study of strongly correlated systems. We will discuss optical lattices and the Hubbard model and the Mott transition. If we have sufficient time we might take a look into Feshbach-Resonances and the BEC-BCS crossover.</p>
+<div class="admonition-tutorial admonition">
+<p class="admonition-title">Tutorial</p>
+<p>In this tutorial you will have the occasion to take a look into the paper on single site imaging by Sherson et al. <span id="id1">[<a class="reference internal" href="#id9">SWE+10</a>]</span> as well as <span id="id2">[<a class="reference internal" href="#id8">BPT+10</a>]</span></p>
+</div>
+</div>
+<div class="section" id="day-collective-spins">
+<h2><a class="reference internal" href="day3.html"><span class="doc std std-doc">3. Day – Collective spins</span></a><a class="headerlink" href="#day-collective-spins" title="Permalink to this headline">¶</a></h2>
+<p>In cold atoms it is possible to implement long collective spins. They are excellent tools for quantum metrology, but also for the emulation of quantum link models. We will discuss how they are experimentally implemented and described.</p>
+<div class="admonition-tutorial admonition">
+<p class="admonition-title">Tutorial</p>
+<p>We will study the spin manipulations at the example of the paper by Müssel et al. <span id="id3">[<a class="reference internal" href="#id7">MSL+14</a>]</span></p>
+</div>
+</div>
+<div class="section" id="day-synthetic-gauge-fields">
+<h2><a class="reference internal" href="day4.html"><span class="doc std std-doc">4. Day – Synthetic gauge fields</span></a><a class="headerlink" href="#day-synthetic-gauge-fields" title="Permalink to this headline">¶</a></h2>
+<p>Strong magnetic (gauge) fields are the third pillar of modern many-body physics, and allow for observation the integer and fractional quantum Hall effect. We will discuss the progress that ultracold atomic gases made to implement such fascinating states of matter in bulk systems and optical lattices.</p>
+<div class="admonition-tutorial admonition">
+<p class="admonition-title">Tutorial</p>
+<p>We will discuss how lattice shaking techniques are used to engineer synthetic gauge fields by Struck et al.</p>
+</div>
+</div>
+<div class="section" id="day-dynamical-gauge-fields">
+<h2><a class="reference internal" href="day5.html"><span class="doc std std-doc">5. Day – Dynamical gauge fields</span></a><a class="headerlink" href="#day-dynamical-gauge-fields" title="Permalink to this headline">¶</a></h2>
+<p>Finally, the extension of static synthetic gauge fields to dynamical gauge fields would lead the field of ultracold atoms naturally into topics, which were traditionally discussed in high energy systems. We will take a look into these possibilities and challenges within ultracold atoms.</p>
+<div class="admonition-tutorial admonition">
+<p class="admonition-title">Tutorial</p>
+<p>We will discuss recent progress from Heidelberg  on dynamical gauge fields in atomic mixtures. <span id="id4">[<a class="reference internal" href="#id6">MZH+20</a>]</span></p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">BPT+10</a></span></dt>
+<dd><p>W.S. Bakr, A. Peng, M.E. Tai, R. Ma, J. Simon, J.I. Gillen, S. Fölling, L. Pollet, and M. Greiner. Probing the Superfluid-to-Mott Insulator Transition at the Single-Atom Level. <em>Science</em>, 329(July):547–551, 2010.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id4">MZH+20</a></span></dt>
+<dd><p>Alexander Mil, Torsten V. Zache, Apoorva Hegde, Andy Xia, Rohit P. Bhatt, Markus K. Oberthaler, Philipp Hauke, Jürgen Berges, and Fred Jendrzejewski. A scalable realization of local U(1) gauge invariance in cold atomic mixtures. <em>Science</em>, 367(6482):1128–1130, mar 2020. URL: <a class="reference external" href="https://www.sciencemag.org/lookup/doi/10.1126/science.aaz5312">https://www.sciencemag.org/lookup/doi/10.1126/science.aaz5312</a>, <a class="reference external" href="https://arxiv.org/abs/1909.07641">arXiv:1909.07641</a>, <a class="reference external" href="https://doi.org/10.1126/science.aaz5312">doi:10.1126/science.aaz5312</a>.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">MSL+14</a></span></dt>
+<dd><p>W. Muessel, H. Strobel, D. Linnemann, D. B. Hume, and M. K. Oberthaler. Scalable Spin Squeezing for Quantum-Enhanced Magnetometry with Bose-Einstein Condensates. <em>Physical Review Letters</em>, 113(10):103004, 2014. URL: <a class="reference external" href="http://link.aps.org/doi/10.1103/PhysRevLett.113.103004">http://link.aps.org/doi/10.1103/PhysRevLett.113.103004</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.113.103004">doi:10.1103/PhysRevLett.113.103004</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">SWE+10</a></span></dt>
+<dd><p>Jacob F Sherson, Christof Weitenberg, Manuel Endres, Marc Cheneau, Immanuel Bloch, and Stefan Kuhr. Single-atom-resolved fluorescence imaging of an atomic Mott insulator. <em>Nature</em>, 467(7311):68–72, 2010. URL: <a class="reference external" href="http://dx.doi.org/10.1038/nature09378">http://dx.doi.org/10.1038/nature09378</a>, <a class="reference external" href="https://arxiv.org/abs/arXiv:1006.3799v1">arXiv:arXiv:1006.3799v1</a>, <a class="reference external" href="https://doi.org/10.1038/nature09378">doi:10.1038/nature09378</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='right-next' id="next-link" href="day1.html" title="next page">Day 1: How we got ultracold</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Fred Jendrzejewski<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
