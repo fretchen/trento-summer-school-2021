@@ -2,7 +2,7 @@
 
 Highly controlled experimental platforms like ultracold atoms have profoundly changed our approach to many-body physics over the last twenty years. In this course, we will discuss the experimental tools that enabled this progress and take a deeper look how those tools lead to current efforts on the investigation of lattice gauge theories. The following can be seen as a preliminary guideline for the five day lecture:
 
-## [1. Day -- How we got ultracold](day1)
+## [1. Day -- How we got ultracold](day1/day1.md)
 We will discuss the origins and development of laser cooling techniques as well as the first creation of a Bose-Einstein condensates. These works provide the solid experimental tools for the study of complex many-body systems that we will study the next days.
 
 ```{admonition} Tutorial
