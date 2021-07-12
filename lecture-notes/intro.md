@@ -29,7 +29,7 @@ We will study the spin manipulations at the example of the paper by Müssel et a
 Strong magnetic (gauge) fields are the third pillar of modern many-body physics, and allow for observation the integer and fractional quantum Hall effect. We will discuss the progress that ultracold atomic gases made to implement such fascinating states of matter in bulk systems and optical lattices.
 
 ```{admonition} Tutorial
-We will discuss how lattice shaking techniques are used to engineer synthetic gauge fields by Struck et al.
+We will discuss how lattice shaking techniques are used to engineer synthetic gauge fields by Struck et al. {cite}`Struck2012`
 ```
 
 ## [5. Day -- Dynamical gauge fields](day5)
