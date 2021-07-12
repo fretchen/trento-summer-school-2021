@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1: How we got ultracold &#8212; Cold atoms for hep</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" extensions="braket" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Day 2: Strongly interacting systems" href="../day2.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/my_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cold atoms for hep</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Day 1: How we got ultracold
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day2.html">
+   Day 2: Strongly interacting systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day3.html">
+   Day 3 : Collective spins
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day4.html">
+   Day 4: Synthetic gauge fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day5.html">
+   Day 5: Opening the route towards high energy physics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/day1/day1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fday1/day1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-two-level-system-from-an-amo-perspective">
+   The two-level system from an AMO perspective
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-of-no-perturbation-omega-0">
+     Case of no perturbation \(\Omega = 0\)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-of-no-detuning-delta-0">
+     Case of no detuning \(\Delta = 0\)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-case">
+     General case
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-bloch-sphere">
+   The Bloch sphere
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dynamical-aspects">
+   Dynamical Aspects
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-evolution-of-ket-psi-t">
+     Time Evolution of \(\ket{\psi(t)}\)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-of-the-dynamics-in-the-spin-picture">
+     Visualization of the dynamics in the spin picture
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-few-words-on-the-quantum-information-notation">
+   A few words on the quantum information notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotating-frame">
+   Rotating frame
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evolution-equation">
+     Evolution Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotating-wave-approximation">
+     Rotating wave approximation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="day-1-how-we-got-ultracold">
+<span id="my-label"></span><h1>Day 1: How we got ultracold<a class="headerlink" href="#day-1-how-we-got-ultracold" title="Permalink to this headline">¶</a></h1>
+<p>We discuss the origins and development of laser cooling techniques as well as the first creation of a Bose-Einstein condensates. These works provide the solid experimental tools for the study of complex many-body systems that we will study the next days. Most of the details can be found in the attached slides. Here we will simply go through a number of details that cannot be captured in slides quite as easily.</p>
+<div class="section" id="the-two-level-system-from-an-amo-perspective">
+<h2>The two-level system from an AMO perspective<a class="headerlink" href="#the-two-level-system-from-an-amo-perspective" title="Permalink to this headline">¶</a></h2>
+<p>To start out, we will consider two eigenstates \(\ket{0}\), \(\ket{1}\) of the Hamiltonian \(\hat{H}_0\) with</p>
+<div class="amsmath math notranslate nohighlight" id="equation-78520369-1356-4207-b3bd-5f1ca42dd4ce">
+<span class="eqno">(1)<a class="headerlink" href="#equation-78520369-1356-4207-b3bd-5f1ca42dd4ce" title="Permalink to this equation">¶</a></span>\[\begin{align}
+ \hat{H}_0\ket{0}=E_0\ket{0}, \qquad \hat{H}_0\ket{1}=E_1\ket{1}.
+\end{align}\]</div>
+<p>Quite typically we might think of it as a two-level atom with states 1 and 2. The eigenstates can be expressed in matrix notation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b71159f4-4587-4b44-a2b8-c74b723b17a3">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b71159f4-4587-4b44-a2b8-c74b723b17a3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+ \ket{0}=\left( \begin{array}{c} 1 \\ 0 \end{array} \right), \qquad \ket{1}=\left( \begin{array}{c} 0 \\ 1 \end{array} \right),
+\end{align}\]</div>
+<p>so that \(\hat{H}_0\) be written as a diagonal matrix</p>
+<div class="amsmath math notranslate nohighlight" id="equation-16bed220-d3c0-41d4-a565-b4b318378633">
+<span class="eqno">(3)<a class="headerlink" href="#equation-16bed220-d3c0-41d4-a565-b4b318378633" title="Permalink to this equation">¶</a></span>\[\begin{align}
+    \hat{H}_0 = \left(\begin{array}{cc} E_0 &amp; 0 \\ 0 &amp; E_1 \end{array}\right).
+\end{align}\]</div>
+<p>If we would only prepare eigenstates the system would be rather boring. However, we typically have the ability to change the Hamiltonian by switching on and off laser or microwave fields. We can then write the Hamiltonian in its most general form as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-twolevelgeneral">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-twolevelgeneral" title="Permalink to this equation">¶</a></span>\[\begin{split}\hat{H} = \frac{\hbar}{2}\left( \begin{array}{cc} \Delta  &amp; \Omega_x - i\Omega_y\\ \Omega_x +i\Omega_y &amp; -\Delta \end{array} \right)\end{split}\]</div>
+<p>Sometimes we will also chose the definition:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-636ffd76-3a46-4f43-9d51-356b90d81c9c">
+<span class="eqno">(5)<a class="headerlink" href="#equation-636ffd76-3a46-4f43-9d51-356b90d81c9c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\Omega = |\Omega| e^{i\varphi}=\Omega_x + i\Omega_y
+\end{align}\]</div>
+<p>It is particularly useful for the case in which the coupling is created by a laser. Another useful way of thinking about the two-level system is as a spin in a magnetic field. Let us remind us of the definitions of the of the spin-1/2 matrices:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5e66dfea-dae9-42e6-b287-bb1b5ddb637d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-5e66dfea-dae9-42e6-b287-bb1b5ddb637d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+s_x = \frac{\hbar}{2}\left(\begin{array}{cc}
+0 &amp; 1\\
+1 &amp;  0
+\end{array}
+\right)~
+s_y = \frac{\hbar}{2}\left(\begin{array}{cc}
+0 &amp; -i\\
+i &amp;  0
+\end{array}
+\right)~s_z =\frac{\hbar}{2} \left(\begin{array}{cc}
+1 &amp; 0\\
+0 &amp;  -1
+\end{array}
+\right)
+\end{align}\]</div>
+<p>We then obtain:</p>
+<div class="math notranslate nohighlight" id="equation-eq-hamspin">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-hamspin" title="Permalink to this equation">¶</a></span>\[\hat{H} = \mathbf{B}\cdot\hat{\mathbf{s}}\text{ with }\mathbf{B} = (\Omega_x, \Omega_y, \Delta)\]</div>
+<p>You will go through this calculation in the excercise of this week.</p>
+<div class="section" id="case-of-no-perturbation-omega-0">
+<h3>Case of no perturbation \(\Omega = 0\)<a class="headerlink" href="#case-of-no-perturbation-omega-0" title="Permalink to this headline">¶</a></h3>
+<p>This is exactly the case of no applied laser fields that we discussed previously. We simply removed the energy offset \(E_m = \frac{E_0+E_1}{2}\) and pulled out the factor \(\hbar\), such that \(\Delta\) measures a frequency. So we have:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2a0cc3c7-8fad-412d-a16a-52606e0bc779">
+<span class="eqno">(8)<a class="headerlink" href="#equation-2a0cc3c7-8fad-412d-a16a-52606e0bc779" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E_0 = E_m+ \frac{\hbar}{2}\Delta\\
+E_1 = E_m- \frac{\hbar}{2}\Delta
+\end{align}\]</div>
+<p>We typically call \(\Delta\) the energy difference between the levels or the <em>detuning</em>.</p>
+</div>
+<div class="section" id="case-of-no-detuning-delta-0">
+<h3>Case of no detuning \(\Delta = 0\)<a class="headerlink" href="#case-of-no-detuning-delta-0" title="Permalink to this headline">¶</a></h3>
+<p>Let us suppose that the diagonal elements are exactly zero. And for simplicity we will also keep \(\Omega_y =0\) as it simply complicates the calculations without adding much to the discussion at this stage. The Hamiltonian reads then:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d2f9a00d-eebf-4a13-b342-947cf22e10e4">
+<span class="eqno">(9)<a class="headerlink" href="#equation-d2f9a00d-eebf-4a13-b342-947cf22e10e4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\hat{H} = \frac{\hbar}{2}\left( \begin{array}{cc} 0  &amp; \Omega\\ \Omega &amp;0 \end{array} \right)
+\end{align}\]</div>
+<p>Quite clearly the states \(\varphi_{1,2}\) are not the eigenstates of the system anymore. How should the system be described now ? We can once again diagonalize the system and write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-78a220ff-f656-4a7e-a0ab-ca11b5f74a1d">
+<span class="eqno">(10)<a class="headerlink" href="#equation-78a220ff-f656-4a7e-a0ab-ca11b5f74a1d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\hat{H}\ket{\varphi_{\pm}} = E_{\pm}\ket{\varphi_\pm}\\
+E_{\pm} = \pm\frac{\hbar}{2}\Omega\\
+\ket{\varphi_\pm} = \frac{\ket{0}\pm\ket{1}}{\sqrt{2}}
+\end{align}\]</div>
+<p>Two important consequences can be understood from this result:</p>
+<ul class="simple">
+<li><p>The coupling of the two states shifts their energy by \(\Omega\). This is the idea of level repulsion.</p></li>
+<li><p>The coupled states are a superposition of the initial states.</p></li>
+</ul>
+<p>This is also a motivation the formulation of the <em>‘bare’</em> system for \(\Omega = 0\) and the <em>‘dressed’</em> states for the coupled system.</p>
+</div>
+<div class="section" id="general-case">
+<h3>General case<a class="headerlink" href="#general-case" title="Permalink to this headline">¶</a></h3>
+<p>Quite importantly we can solve the system completely even in the general case. By diagonalizing  Eq. <a class="reference internal" href="#equation-eq-twolevelgeneral">(4)</a> we obtain:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3ade4b83-c21a-4f37-848a-f049986cc43a">
+<span class="eqno">(11)<a class="headerlink" href="#equation-3ade4b83-c21a-4f37-848a-f049986cc43a" title="Permalink to this equation">¶</a></span>\[\begin{align}\label{eq:Epm}
+ E_\pm = \pm \frac{\hbar}{2} \sqrt{\Delta^2+|\Omega|^2}
+\end{align}\]</div>
+<p>The energies can be nicely summarized as in <a class="reference internal" href="#avoided-crossing"><span class="std std-numref">Fig. 1</span></a></p>
+<div class="figure align-default" id="avoided-crossing">
+<a class="reference internal image-reference" href="../_images/AvoidedCrossing.png"><img alt="../_images/AvoidedCrossing.png" src="../_images/AvoidedCrossing.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The presentation of the eigenstate on the Bloch sphere.</span><a class="headerlink" href="#avoided-crossing" title="Permalink to this image">¶</a></p>
+</div>
+<p>The Eigenstates then read:</p>
+<div class="math notranslate nohighlight" id="equation-eq-staticpsiplus">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-staticpsiplus" title="Permalink to this equation">¶</a></span>\[\ket{\psi_+}=\cos\left(\frac{\theta}{2}\right) e^{-i{\varphi}/{2}}\ket{0}+\sin\left(\frac{\theta}{2}\right) e^{i{\varphi}/{2}}\ket{1}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-staticpsiminus">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-staticpsiminus" title="Permalink to this equation">¶</a></span>\[\ket{\psi_-}=-\sin\left(\frac{\theta}{2}\right) e^{-i{\varphi}/{2}}\ket{0}+\cos\left(\frac{\theta}{2}\right) e^{i{\varphi}/{2}}\ket{1}\]</div>
+<p>where</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9ebc075f-e042-42cd-b123-62e49891b6b6">
+<span class="eqno">(14)<a class="headerlink" href="#equation-9ebc075f-e042-42cd-b123-62e49891b6b6" title="Permalink to this equation">¶</a></span>\[\begin{align} \label{eq:parameters}
+	\tan(\theta) = \frac{|\Omega|}{\Delta}
+\end{align}\]</div>
+</div>
+</div>
+<div class="section" id="the-bloch-sphere">
+<h2>The Bloch sphere<a class="headerlink" href="#the-bloch-sphere" title="Permalink to this headline">¶</a></h2>
+<p>While we could just discuss the details of the above state in the abstract, it is extremely helpful to visualize the problem on the Bloch sphere. The idea of the Bloch sphere is that the we have a complex wave function of well defined norm and two free parameters. So it seems quite natural to look for a good representation of it. And this is the Bloch sphere as drawn in <a class="reference internal" href="#bloch-sphere"><span class="std std-numref">Fig. 2</span></a>.</p>
+<div class="figure align-default" id="bloch-sphere">
+<a class="reference internal image-reference" href="../_images/BlochSphereWithVectorForLecture.png"><img alt="../_images/BlochSphereWithVectorForLecture.png" src="../_images/BlochSphereWithVectorForLecture.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">The presentation of the eigenstate on the Bloch sphere.</span><a class="headerlink" href="#bloch-sphere" title="Permalink to this image">¶</a></p>
+</div>
+<p>We will see especially its usefulness especially as we discuss the dynamics of the two-state system.</p>
+</div>
+<div class="section" id="dynamical-aspects">
+<h2>Dynamical Aspects<a class="headerlink" href="#dynamical-aspects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="time-evolution-of-ket-psi-t">
+<h3>Time Evolution of \(\ket{\psi(t)}\)<a class="headerlink" href="#time-evolution-of-ket-psi-t" title="Permalink to this headline">¶</a></h3>
+<p>After the static case we now want to investigate the dynamical properties of the two-state system. We calculate the time evolution of \(\ket{\psi(t)} = c_0(t)\ket{0} + c_1(t)\ket{1}\) with the Schrödinger equation and the perturbed Hamiltonian <a class="reference internal" href="#equation-eq-twolevelgeneral">(4)</a>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c0f9fe6a-aefb-4760-b772-1c9f8186c782">
+<span class="eqno">(15)<a class="headerlink" href="#equation-c0f9fe6a-aefb-4760-b772-1c9f8186c782" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i\hbar \frac{d}{dt}\ket{\psi(t)}&amp;=\hat{H}\ket{\psi(t)},\\
+i \frac{d}{dt}\left(\begin{array}{c} c_0(t) \\ c_1(t) \end{array}\right) &amp;= \frac{1}{2}\left( \begin{array}{cc} \Delta &amp; \Omega \\ \Omega^* &amp; -\Delta \end{array} \right) \left(\begin{array}{c} c_0(t) \\ c_1(t) \end{array} \right).
+\end{align}\]</div>
+<p>We have two coupled differential equations and we luckily already know how to solve them as we have calculated the two eigenenergies in the previous section. For the state \(\ket{\psi(t)}\) we get</p>
+<div class="math notranslate nohighlight" id="equation-eq-psitimeevolution">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-psitimeevolution" title="Permalink to this equation">¶</a></span>\[\ket{\psi(t)}=\lambda e^{-i{E_+}t/{\hbar}} \ket{\psi_+} + \mu e^{-i{E_-}t/{\hbar}} \ket{\psi_-}\]</div>
+<p>with the factors \(\lambda\) and \(\mu\), which are defined by the initial state. The most common question is then what happens to the system if we start out in the bare state \(\ket{0}\) and then let it evolve under coupling with a laser ? So what is the probability to find it in the other state \(\ket{1}\):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9ecfb9eb-cd95-4286-bbd0-eed94fdab5bc">
+<span class="eqno">(17)<a class="headerlink" href="#equation-9ecfb9eb-cd95-4286-bbd0-eed94fdab5bc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+	P_1(t)=\left|\braket{1|\psi(t)}\right|^2.
+\end{align}\]</div>
+<p>As a first step, we have to apply the initial condition to <a class="reference internal" href="#equation-eq-psitimeevolution">(16)</a> and express \(\ket{\varphi}\) in terms of <a class="reference internal" href="#equation-eq-staticpsiplus">(12)</a> and <a class="reference internal" href="#equation-eq-staticpsiminus">(13)</a>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3d90e726-288f-4d22-947a-08d44dc569c3">
+<span class="eqno">(18)<a class="headerlink" href="#equation-3d90e726-288f-4d22-947a-08d44dc569c3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+					\ket{\psi(0)} \overset{!}{=}&amp; \ket{0}\\
+											  = &amp; e^{i{\varphi}/{2}} \left[ \cos\left( \frac{\theta}{2}\right) \ket{\psi_+}-\sin\left(\frac{\theta}{2}\right)\ket{\psi_-}\right]
+				\end{align}\]</div>
+<p>By equating the coefficients we get for \(\lambda\) and \(\mu\):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e09cea17-031e-45c6-8bf4-37c3bb99b1ed">
+<span class="eqno">(19)<a class="headerlink" href="#equation-e09cea17-031e-45c6-8bf4-37c3bb99b1ed" title="Permalink to this equation">¶</a></span>\[\begin{align}
+  \lambda = e^{i{\varphi}/{2}}\cos\left(\frac{\theta}{2}\right), \qquad  \mu = -e^{i{\varphi}/{2}}\sin\left(\frac{\theta}{2}\right).
+\end{align}\]</div>
+<p>One thus gets:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4249699a-9c39-482e-9ebf-0ceb3d949a00">
+<span class="eqno">(20)<a class="headerlink" href="#equation-4249699a-9c39-482e-9ebf-0ceb3d949a00" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\hspace{-2mm} P_1(t)	=&amp;\left|\braket{1|\psi(t)}\right|^2 \\
+=&amp; \left|e^{i\varphi} \sin\left(\frac{\theta}{2}\right)\cos\left(\frac{\theta}{2}\right)\left[e^{-i{E_+}t/{\hbar}} - e^{-i{E_-}t/{\hbar}}\right]\right|^2\\
+=&amp; \sin^2(\theta)\sin^2\left(\frac{E_+-E_-}{2\hbar}t\right)
+\end{align}\]</div>
+<p>\(P_1(t)\) can be expressed with \(\Delta\) and \(\Omega\) alone. The obtained relation is called Rabi’s formula:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1e9f363f-9c12-4534-bcfc-07ad7778105b">
+<span class="eqno">(21)<a class="headerlink" href="#equation-1e9f363f-9c12-4534-bcfc-07ad7778105b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+ P_1(t)=\frac{1}{1+\left(\frac{\Delta}{|\Omega|}\right)^2}\sin^2\left(\sqrt{|\Omega|^2+\Delta^2}\frac{t}{2}\right)
+\end{align}\]</div>
+<div class="figure align-default" id="rabi-oscillation">
+<a class="reference internal image-reference" href="../_images/RabiOscillation.png"><img alt="../_images/RabiOscillation.png" src="../_images/RabiOscillation.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Rabi oscillations</span><a class="headerlink" href="#rabi-oscillation" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="visualization-of-the-dynamics-in-the-spin-picture">
+<h3>Visualization of the dynamics in the spin picture<a class="headerlink" href="#visualization-of-the-dynamics-in-the-spin-picture" title="Permalink to this headline">¶</a></h3>
+<p>While the previous derivation might be the standard one, which certainly leads to the right results it might not be the most intuitive way of thinking about the dynamics. They become actually quite transparent in the spin language and on the Bloch sphere. So let us go back to the formulation of the Hamiltonian in terms of spins as in Eq. <a class="reference internal" href="#equation-eq-hamspin">(7)</a>.</p>
+<p>How would the question of the time evolution from 0 to 1 and back go now ? Basically, we would assume that the spin has been initialize into one of the eigenstates of the $z$-basis and now starts to rotate in some magnetic field. How ? This can be nicely studied in the Heisenberg picture, where operators have a time evolution. In the Heisenberg picture we have:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6fe74e42-9206-45ac-a645-55d350bd9a9b">
+<span class="eqno">(22)<a class="headerlink" href="#equation-6fe74e42-9206-45ac-a645-55d350bd9a9b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{d}{dt} \hat{s}_i &amp;= \frac{i}{\hbar}\left[\hat{H},\hat{s}_i\right]\\
+\frac{d}{dt} \hat{s}_i &amp;= \frac{i}{\hbar}\sum_j B_j \left[\hat{s}_j,\hat{s}_i\right]\\
+ \end{align}\]</div>
+<p>So to understand we time evolution, we only need to employ the commutator relationships between the spins:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-190140ab-09ee-450e-861c-470a8534b768">
+<span class="eqno">(23)<a class="headerlink" href="#equation-190140ab-09ee-450e-861c-470a8534b768" title="Permalink to this equation">¶</a></span>\[\begin{align}
+[ s_x, s_y] = \hbar is_z~~[ s_y, s_z] = \hbar is_x~~[ s_z, s_x] = \hbar is_y
+\end{align}\]</div>
+<p>For the specific case of \(B_x=\Omega\), \(B_y = B_z = 0\), we have then:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6cb62264-1fc4-45aa-8e22-6519eb525ac7">
+<span class="eqno">(24)<a class="headerlink" href="#equation-6cb62264-1fc4-45aa-8e22-6519eb525ac7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{d}{dt} \hat{s}_x &amp;= 0\\
+\frac{d}{dt} \hat{s}_y &amp;= -\Omega \hat{s}_z\\
+\frac{d}{dt} \hat{s}_z &amp;= \Omega \hat{s}_y
+ \end{align}\]</div>
+<p>So applying a field in x-direction leads to a rotation of the spin around the x axis with velocity \(\Omega\). We can now use this general picture to understand the dynamics as rotations around an axis, which is defined by the different components of the magnetic field.</p>
+</div>
+</div>
+<div class="section" id="a-few-words-on-the-quantum-information-notation">
+<h2>A few words on the quantum information notation<a class="headerlink" href="#a-few-words-on-the-quantum-information-notation" title="Permalink to this headline">¶</a></h2>
+<p>The qubit is THE basic ingredient of quantum computers. A nice way to play around with them is actually the <a class="reference external" href="https://quantum-computing.ibm.com/">IBM Quantum experience</a>. However, you will typically not find Pauli matrices etc within these systems. The typical notation there is:</p>
+<ul class="simple">
+<li><p>\(R_x(\phi)\) is a rotation around the x-axis for an angle \(\phi\).</p></li>
+<li><p>Same holds for \(R_y\) and \(R_z\).</p></li>
+<li><p><em>X</em> denotes the rotation around the x axis for an angle \(\pi\). So it transforms \(\ket{1}\) into  \(\ket{0}\) and vise versa.</p></li>
+<li><p><em>Z</em> denotes the rotation around the x axis for an angle \(\pi\). So it transforms \(\ket{+}\) into  \(\ket{-}\) and vise versa.</p></li>
+</ul>
+<p>The most commonly used gate is actually one that we did not talk about at all, it is the <em>Hadamard</em> gate, which transforms \(\ket{1}\) into  \(\ket{-}\) and \(\ket{0}\) into  \(\ket{+}\):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b387542e-a171-4e88-a986-75fa78b3ff51">
+<span class="eqno">(25)<a class="headerlink" href="#equation-b387542e-a171-4e88-a986-75fa78b3ff51" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\hat{H}\ket{1} &amp;= \ket{-}  ~   \hat{H}\ket{0} &amp;= \ket{+}\\
+\hat{H}\ket{-} &amp;= \ket{1}  ~   \hat{H}\ket{+} &amp;= \ket{0}
+\end{align}\]</div>
+</div>
+<div class="section" id="rotating-frame">
+<h2>Rotating frame<a class="headerlink" href="#rotating-frame" title="Permalink to this headline">¶</a></h2>
+<p>Until now, we discussed the properties of two coupled levels. However, we did not elaborate at any stage how such a system might emerge in a true atom. Two fundamental questions come to mind:</p>
+<ul class="simple">
+<li><p>How is it that a laser allows to treat two atomic levels of very different energies as if they were degenerate ?</p></li>
+<li><p>An atom has many energy levels $E_n$ and most of them are not degenerate. How can we reduce this complicated structure to a two-level system?</p></li>
+</ul>
+<p>The solution is to resonantly couple two of the atom’s levels by applying an external, oscillatory field, which is very nicely discussed in chapter 12 of Ref. <span id="id1">[<a class="reference internal" href="../intro.html#id7">CTDRG98</a>]</span>. We will discuss important and fundamental properties of systems with a time-dependent Hamiltonian.</p>
+<p>We will discuss a simple model for  the atom in the oscillatory field. We can write down the Hamiltonian:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a972082c-0701-4de6-baba-fbfb4e72ee6b">
+<span class="eqno">(26)<a class="headerlink" href="#equation-a972082c-0701-4de6-baba-fbfb4e72ee6b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+ \hat{H} = \hat{H}_0 + \hat{V}(t).
+\end{align}\]</div>
+<p>Here, \( \hat{H}_0 \) belongs to the atom and V(t) describes the time-dependent field and its interaction with the atom. We assume that \(\ket{n}\) is an eigenstate of \(\hat{H}_0\) and write:
+\begin{align}
+\hat{H}_0\ket{n} = E_n \ket{n}.
+\end{align}</p>
+<p>If the system is initially prepared in the state \(\ket{i}\), so that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8dd987e0-c819-4258-acb6-bbfe50d1fd94">
+<span class="eqno">(27)<a class="headerlink" href="#equation-8dd987e0-c819-4258-acb6-bbfe50d1fd94" title="Permalink to this equation">¶</a></span>\[\begin{align}
+	\ket{\psi(t=0)} = \ket{i},
+\end{align}\]</div>
+<p>what is the probability</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ef0a039e-49db-43da-b482-e129a0352548">
+<span class="eqno">(28)<a class="headerlink" href="#equation-ef0a039e-49db-43da-b482-e129a0352548" title="Permalink to this equation">¶</a></span>\[\begin{align}
+	P_m(t) = \left|\braket{m|\psi(t)}\right|^2
+\end{align}\]</div>
+<p>to find the system in the state \(\ket{m}\) at the time t?</p>
+<div class="section" id="evolution-equation">
+<h3>Evolution Equation<a class="headerlink" href="#evolution-equation" title="Permalink to this headline">¶</a></h3>
+<p>The system \(\ket{\psi(t)}\) can be expressed as follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fdca1874-53c3-4741-9c4a-1bb39a7c5ae5">
+<span class="eqno">(29)<a class="headerlink" href="#equation-fdca1874-53c3-4741-9c4a-1bb39a7c5ae5" title="Permalink to this equation">¶</a></span>\[\begin{align}
+	\ket{\psi(t)} = \sum_n \gamma_n(t) e^{-i{E_n}t/{\hbar}} \ket{n},
+\end{align}\]</div>
+<p>where the exponential is the time evolution for \(\hat{H}_1 =~0\). We plug this equation in the Schrödinger equation and get:</p>
+<div class="math notranslate nohighlight" id="equation-eq-timeev">
+<span class="eqno">(30)<a class="headerlink" href="#equation-eq-timeev" title="Permalink to this equation">¶</a></span>\[i\hbar \sum_n\left(\dot{\gamma}_n(t)-i\frac{E_n}{\hbar}\gamma_n(t)\right)e^{-i{E_n}t/{\hbar}}\ket{n} = \sum_n \gamma_n(t) e^{-i{E_n}t/{\hbar}}\left(\hat{H}_0 + \hat{V}\right) \ket{n}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0813093c-8812-4b00-8e2f-5d68237041a4">
+<span class="eqno">(31)<a class="headerlink" href="#equation-0813093c-8812-4b00-8e2f-5d68237041a4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\Longleftrightarrow i\hbar\sum_n \dot{\gamma}_n(t) e^{-i{E_n}t/{\hbar}} \ket{n}
+ = \sum_n \gamma_n(t) e^{-i{E_n}t/{\hbar}} \hat{V} \ket{n}
+\end{align}\]</div>
+<p>If we multiply <a class="reference internal" href="#equation-eq-timeev">(30)</a> with \(\bra{k}\) we obtain a set of coupled differential equations
+\begin{align}
+i\hbar \dot{\gamma}_k e^{-i{E_k}t/{\hbar}} &amp;= \sum_n \gamma_n e^{-{E_n}t/{\hbar}}\bra{k}\hat{V}\ket{n},\
+i\hbar \dot{\gamma}_k &amp;= \sum_n \gamma_n e^{-i {(E_n-E_k)}t/{\hbar}} \bra{k} \hat{V}\ket{n}
+\end{align}
+with initial conditions \(\ket{\psi(t=0)}\). They determine the full time evolution.</p>
+<p>The solution of this set of equations depends on the details of the system. However, there are a few important points:</p>
+<ul class="simple">
+<li><p>For short enough times, the dynamics are driving by the coupling strength \(\bra{k}\hat{V} \ket{n}\).</p></li>
+<li><p>The right-hand sight will oscillate on time scales of \(E_n-E_k\) and typically average to zero for long times.</p></li>
+<li><p>If the coupling element is an oscillating field \(\propto e^{i\omega_L t}\), it might put certain times on resonance and allow us to avoid the averaging effect. It is exactly this effect, which allows us to isolate specific transitions to a very high degree. This is the idea behind atomic and optical clocks, which work nowadays at \(10^{-18}\).</p></li>
+</ul>
+<p>We will now see how the two-state system emerges from these approximations and then set-up the perturbative treatment step-by-step.</p>
+</div>
+<div class="section" id="rotating-wave-approximation">
+<h3>Rotating wave approximation<a class="headerlink" href="#rotating-wave-approximation" title="Permalink to this headline">¶</a></h3>
+<p>We will now assume that the coupling term in indeed an oscillating field with frequency \(\omega_L\), so it reads:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-90deb195-c24b-4575-a08e-f48a160caa9e">
+<span class="eqno">(32)<a class="headerlink" href="#equation-90deb195-c24b-4575-a08e-f48a160caa9e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\hat{V} = \hat{V}_0 \cos(\omega_Lt) = \frac{\hat{V}_0}{2} \left(e^{i\omega_lt}+e^{-i\omega_lt}\right)  
+\end{align}\]</div>
+<p>We will further assume the we would like use it to isolate the transition \(i\rightarrow f\), which is of frequency \(\hbar \omega_0 = E_f - E_i\). The relevant quantity is then the detuning \(\delta = \omega_0 - \omega_L\). If it is much smaller than any other energy difference \(E_n-E_i\), we directly reduce the system to the following closed system:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-71aa938d-1d38-4878-8d3b-9d2fdfc55e77">
+<span class="eqno">(33)<a class="headerlink" href="#equation-71aa938d-1d38-4878-8d3b-9d2fdfc55e77" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i\dot{\gamma}_i &amp;= \gamma_f e^{-i \delta t} \Omega\\
+i\dot{\gamma}_f &amp;= \gamma_i e^{i \delta t}\Omega^*
+\end{align}\]</div>
+<p>Here we defined \(\Omega = \bra{i} \frac{\hat{V_0}}{2\hbar}\ket{f}\). And to make it really a time-of the same form as the two-level system from the last lecture, we perform the transformation \(\gamma_f = \tilde{\gamma}_f e^{i\delta t}\), which reduces the system too:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-52c707c8-172c-42a8-a537-5640ff3dc97f">
+<span class="eqno">(34)<a class="headerlink" href="#equation-52c707c8-172c-42a8-a537-5640ff3dc97f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i \dot{\gamma}_i &amp;= \Omega \tilde{\gamma}_f \\
+i\dot{\tilde{\gamma}}_f &amp;= \delta \tilde{\gamma}_f + \Omega^* \gamma_i
+\end{align}\]</div>
+<p>This has exactly the form of the two-level system that we studied previously.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./day1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="../day2.html" title="next page">Day 2: Strongly interacting systems</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Fred Jendrzejewski<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
